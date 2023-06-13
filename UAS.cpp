@@ -224,6 +224,7 @@ menu:
 
         for (int i = 0; i < jumlahBarang; i++) {
             pajak.getPajakLokal(daftarBarang[i]);
+            totalKeseluruhan += pajak.setPajakLokal(daftarBarang[i]);
         }
         cout << "\t\tTotal Keseluruhan: Rp. " << totalKeseluruhan << endl; // Menampilkan total keseluruhan
         cout << "\n\t\tPress any key to continue...";
@@ -238,13 +239,14 @@ menu:
 
         for (int i = 0; i < jumlahBarang; i++) {
             pajak.getPajakInter(daftarBarang[i]);
+            totalKeseluruhan += pajak.setPajakInter(daftarBarang[i]) + pajak.setCukai(daftarBarang[i]);
         }
         cout << "\t\tTotal Keseluruhan: Rp. " << totalKeseluruhan << endl; // Menampilkan total keseluruhan
         cout << "\n\t\tPress any key to continue...";
         getch();
     }
     else if (pil == 0) {
-        cout << "\t\tTerima kasih telah menggunakan program kami " << endl;
+        cout << "\t\tTerima kasih telah menggunakan program kami 🦄😉👍❤️" << endl;
         cout << "\t\t--------------------------------------------------" << endl;
         cout << "\t\t\t\tAnggota Kelompok" << endl;
         cout << "\t\t--------------------------------------------------" << endl;
